@@ -26,10 +26,15 @@ int main (int argc, char *argv[])
     sharedPtr1 = sharedPtr3;
 
     SharedPtr<vector<int>> sharedPtr4 = sharedPtr2;
-    
+
     
     cout << "Size of sharedPtr1 resource: " << sharedPtr1->size() << endl;
     cout << "Size of sharedPtr2 resource: " << sharedPtr2->size() << endl;
     cout << "Size of sharedPtr3 resource: " << sharedPtr3->size() << endl;
     cout << "Size of sharedPtr4 resource: " << sharedPtr4->size() << endl;
+
+    sharedPtr2 = sharedPtr3;
+    auto test = sharedPtr1 == sharedPtr2;
+
+    cout << test << endl;
 }

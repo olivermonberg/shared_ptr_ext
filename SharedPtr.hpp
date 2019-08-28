@@ -1,3 +1,4 @@
+#include <iostream>
 using namespace std;
 
 class ReferenceCount
@@ -87,5 +88,16 @@ public:
     
     T& operator*() const { return *_ptr; }
     T* operator->() const { return _ptr; }
+
+    bool operator==(const SharedPtr& obj) const
+    {
+        return _ptr == obj._ptr;
+        
+        //cout << _ptr << endl;
+        //std::cout << obj._ptr << std::endl;
+        //cout << &_ptr << endl;
+        //std::cout << &obj._ptr << std::endl;
+        //return true;
+    }
 };
 
