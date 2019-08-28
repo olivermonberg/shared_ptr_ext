@@ -27,6 +27,7 @@ int main (int argc, char *argv[])
 
     SharedPtr<vector<int>> sharedPtr4 = sharedPtr2;
     
+    
     cout << "Size of sharedPtr1 resource: " << sharedPtr1->size() << endl;
     cout << "Size of sharedPtr2 resource: " << sharedPtr2->size() << endl;
     cout << "Size of sharedPtr3 resource: " << sharedPtr3->size() << endl;
