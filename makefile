@@ -4,7 +4,7 @@ SOURCES 	= main.cpp
 OBJECTS=$(addprefix $(BUILD_DIR)/, $(SOURCES:.cpp=.o))
 DEPS=$(addprefix $(BUILD_DIR)/, $(SOURCES:.cpp=.d))
 EXE = program
-HOST = linux
+HOST = windows
 
 
 #Compiler setUp
