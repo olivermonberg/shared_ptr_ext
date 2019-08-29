@@ -6,9 +6,9 @@ using namespace std;
 
 int main (int argc, char *argv[])
 {
-    SharedPtr<vector<int>> sharedPtr1( "sharedPtr1", new vector<int>() );
-    SharedPtr<vector<int>> sharedPtr2( "sharedPtr2", new vector<int>() );
-    SharedPtr<vector<int>> sharedPtr3( "sharedPtr3", new vector<int>() );
+    SharedPtr<vector<int>> sharedPtr1( new vector<int>() );
+    SharedPtr<vector<int>> sharedPtr2( new vector<int>() );
+    SharedPtr<vector<int>> sharedPtr3( new vector<int>() );
 
     //sharedPtr1 size = 1
     sharedPtr1->push_back(1);

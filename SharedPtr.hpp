@@ -19,7 +19,7 @@ private:
     ReferenceCount* _referenceCount = nullptr;
     
 public:
-    explicit SharedPtr(string name, T* t = nullptr)
+    explicit SharedPtr(T* t = nullptr)
     : _ptr(t), _referenceCount(new ReferenceCount)
     {
         _referenceCount->Increment();
