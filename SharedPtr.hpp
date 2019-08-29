@@ -1,15 +1,6 @@
 #include <iostream>
+#include "ReferenceCount.hpp"
 using namespace std;
-
-class ReferenceCount
-{
-private:
-  size_t _refCount = 0;
-public:
-  void Increment() { ++_refCount; }
-  int Decrement() { return --_refCount; }
-  int GetCount() const { return _refCount; }
-};
 
 template<typename T>
 class SharedPtr
@@ -88,6 +79,8 @@ public:
     
     T& operator*() const { return *_ptr; }
     T* operator->() const { return _ptr; }
+
+    explicit operator bool() const { return true; }
 
     bool operator==(const SharedPtr& obj) const
     {
