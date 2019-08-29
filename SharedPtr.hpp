@@ -84,13 +84,12 @@ public:
 
     bool operator==(const SharedPtr& obj) const
     {
-        return _ptr == obj._ptr;
-        
         //cout << _ptr << endl;
-        //std::cout << obj._ptr << std::endl;
+        //cout << obj._ptr << endl;
         //cout << &_ptr << endl;
-        //std::cout << &obj._ptr << std::endl;
-        //return true;
+        //cout << &obj._ptr << endl;
+        
+        return _ptr == obj._ptr;
     }
 };
 
